@@ -11,7 +11,6 @@ provider "aws" {
   secret_key = var.secret_key
   region = var.region_name
 }
- 
 variable "access_key"{
    type = string
 }
@@ -23,9 +22,9 @@ variable "region_name"{
    default = "us-east-1"
 }
 resource "aws_instance" "myec2" {
-  ami                    = "ami-06c68f701d8090592"
+  ami                    = "ami-04a81a99f5ec58529"
   instance_type          = "t2.micro"
   tags = {
     Name = "terraform1"
-  }
+  }
 }
